@@ -34,43 +34,28 @@ potentially due to some website error)
 ● Accessing property features: Here, we finally extract the different features under each property
 that will be used in the analysis later. Using beautiful soup, we identify the necessary HTML tag
 identifiers that will give us the targetted information, as mentioned below:
-  ○ Rank: Describes the rank of the property listing under each city, based on its popularity
-  amongst customers
-  ○ Name: Describes the title of the property for identification
-  ○ VRBO_City: Describes the city under which the property is located
-  ○ VRBO_Text: Describes the details about the property as updated by the owner. This
-  the section gives an overview of the uniqueness and offerings of the listing to a customer
-  ○ VRBO_Type: Describes the type of property offered by VRBO namely, hotel, studio,
-  guest house, apartment, house, building, hotel suite, condo, resort, cottage, townhome,
-  yacht, villa, estate, recreational vehicle, bungalow, cabin, houseboat, hostel, corporate
-  apartment, mobile home, and boat
-  ○ Number_of_Bedrooms: Describes the number of bedrooms available in the property
-  ○ Star Rating: Describes the rating of the property as rated by the visitors
-  ○ VRBO_Near: Describes the top 6 famous tourist attractions or important landmarks
-  around the property (typically within 0-3 miles range)
-  ○ VRBO_Price: Describes the price of the property based on occupancy for 1 day, 2 adults,
-  0 children, and 0 pets
-  ○ VRBO_Number_Images: Describes the number of images posted by the owner of a
-  property. More images would indicate more confidence from the owner, in showcasing
-  the property to ensure transparency between the owner and the customer
-  ○ VRBO_Area_SQ: Describes the area covered by the property in square feet
-  ○ Number_Beds: Describes the number of beds available in the property
-  ○ Number_Sleepers: Describes the sleeping capacity available in the property
-  ○ Number_Bathrooms: Describes the number of bathrooms available on the property
-  ○ Number_Baths: Describes the number of baths available on the property
-  ○ Number_Reviews: Contains all the reviews as shared by visitors on the property
-  ○ Reviews_Text: Contains a concatenated format of all the reviews for a particular
-  property, separated by ‘|||’ to distinguish between two different reviews
-  ○ Number_Amenities: Describes the number of amenities supported for each property,
-  namely, microwave, fridge, room heater, hairdryer, etc.
-  6
-  UC Davis Graduate School of Management
-  ○ Amenities_Text: Describes the type of amenities supported for each property, namely,
-  microwave, fridge, room heater, hairdryer, etc.
-  ○ Number_Facilities: Describes the type of facilities available namely, shower, sofa, dining
-  table, etc.
-  ○ Facilities_Text: Describes the number of facilities available namely, shower, sofa, dining
-  table, etc.
+  The following information is provided for each property listing on VRBO:
+- Rank: Indicates the popularity of the listing within its respective city
+- Name: Identifies the property by title
+- VRBO_City: Specifies the city where the property is located
+- VRBO_Text: Provides an overview of the unique features and offerings of the property, as provided by the owner
+- VRBO_Type: Specifies the type of property offered (e.g. hotel, apartment, villa, etc.)
+- Number_of_Bedrooms: Indicates the number of bedrooms available
+- Star Rating: Displays the property rating as given by previous guests
+- VRBO_Near: Lists the top six nearby tourist attractions or landmarks located within a 0-3 mile range
+- VRBO_Price: Displays the price of the property per day for two adults, with no children or pets
+- VRBO_Number_Images: Specifies the number of images provided by the owner to showcase the property
+- VRBO_Area_SQ: Displays the size of the property in square feet
+- Number_Beds: Indicates the number of beds available
+- Number_Sleepers: Specifies the maximum sleeping capacity of the property
+- Number_Bathrooms: Indicates the number of available bathrooms
+- Number_Baths: Indicates the number of available baths
+- Number_Reviews: Lists all guest reviews for the property
+- Reviews_Text: Concatenates all guest reviews for the property, separated by '|||'
+- Number_Amenities: Lists the number of amenities available for the property (e.g. microwave, hairdryer, etc.)
+- Amenities_Text: Specifies the type of amenities available for the property
+- Number_Facilities: Lists the type of facilities available for the property (e.g. shower, dining table, etc.)
+- Facilities_Text: Specifies the number of facilities available for the property.
 
 
 ● Collecting the Data: After extracting the aforementioned details using beautiful soup, we store
